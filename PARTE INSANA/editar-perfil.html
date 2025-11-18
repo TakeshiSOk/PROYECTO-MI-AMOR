@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="editar-perfil.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Cultura Popayán</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Eventos</a>
+            <a href="#">Contacto</a>
+            <a href="#">Acerca de</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Editar Perfil</h1>
+        <p class="subtitle">Personaliza tu experiencia cultural</p>
+
+        <div class="profile-pic-container">
+            <img id="profilePic" src="https://via.placeholder.com/120" alt="Foto de perfil">
+            <label class="pic-label" for="fileInput">Haz clic para cambiar tu foto</label>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <form class="edit-form">
+            <input type="text" placeholder="Tu nombre">
+            <input type="email" placeholder="Correo Electrónico">
+            <input type="text" placeholder="Ciudad">
+            
+            <select>
+                <option>Usuario General</option>
+                <option>Gestor Cultural</option>
+            </select>
+
+            <textarea placeholder="Biografía"></textarea>
+
+            <div class="btn-group">
+                <button type="submit" class="btn save">Guardar</button>
+                <button type="button" class="btn cancel">Cancelar</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Cultura Popayán - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="editar-perfil.js"></script>
+</body>
+</html>

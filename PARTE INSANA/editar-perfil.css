@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0e0d24, #251c4a, #3b1e7d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+    margin-left: 15px;
+    color: #b9b9ff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* MAIN */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #dcdcff;
+}
+
+.profile-pic-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#profilePic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #6d56ff;
+    cursor: pointer;
+}
+
+#fileInput {
+    display: none;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* BOTONES */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.save {
+    background: #5b75ff;
+    color: white;
+}
+
+.cancel {
+    background: #ff4b4b;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.2);
+}

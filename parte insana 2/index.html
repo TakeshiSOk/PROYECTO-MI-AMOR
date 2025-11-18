@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="menu-icon">☰</div>
+                <span class="logo-text">GALERÍAS<br>URBANAS</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#comunidad">Comunidad</a>
+                <a href="#acerca">Acerca de</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-title">
+                <h1>Editar Perfil</h1>
+                <p class="subtitle">Personaliza tu experiencia cultural</p>
+            </div>
+
+            <div class="profile-photo">
+                <div class="photo-wrapper">
+                    <div class="photo-circle">👤</div>
+                </div>
+                <div class="change-photo">Haz clic para cambiar tu foto</div>
+            </div>
+
+            <form id="profileForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="María González" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Nombre de Usuario</label>
+                        <input type="text" id="username" placeholder="@mariagonzalez" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="maria@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" placeholder="Ciudad de México">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País</label>
+                        <select id="pais">
+                            <option value="">Selecciona tu país</option>
+                            <option value="MX">México</option>
+                            <option value="ES">España</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CL">Chile</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="biografia">Biografía</label>
+                    <textarea id="biografia" placeholder="Cuéntanos sobre ti, tus intereses culturales y artísticos..."></textarea>
+                </div>
+
+                <div class="interests-section">
+                    <h3>Intereses Artísticos</h3>
+                    <div class="tags-container" id="tagsContainer">
+                        <div class="tag selected" onclick="toggleTag(this)">
+                            🎨 Pintura
+                        </div>
+                        <div class="tag" onclick="toggleTag(this)">
+                            🎭 Teatro
+                        </div>
+                        <div class="tag selected" onclick="toggleTag(this)">
+                            📸 Fotografía
+                        </div>
+                        <div class="tag" onclick="toggleTag(this)">
+                            🎵 Música
+                        </div>
+                        <div class="tag" onclick="toggleTag(this)">
+                            🎬 Cine
+                        </div>
+                        <div class="tag" onclick="toggleTag(this)">
+                            📚 Literatura
+                        </div>
+                    </div>
+
+                    <div class="add-tag">
+                        <input type="text" id="newTag" placeholder="Agregar nuevo interés...">
+                        <button type="button" class="btn-add-tag" onclick="addTag()">+ Agregar</button>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn btn-secondary" onclick="cancelEdit()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-text">GALERÍAS<br>URBANAS</span>
+                </div>
+                <p class="footer-description">
+                    Descubre experiencias artísticas únicas, explora galerías virtuales y conecta con una comunidad apasionada por el arte.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Eventos destacados</h4>
+                <ul>
+                    <li><a href="#">Arte en Los Independientes</a></li>
+                    <li><a href="#">Performance de Arte Urbano</a></li>
+                    <li><a href="#">Instalación Mayor Astica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Comunidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li><a href="#">Correo Electrónico</a></li>
+                    <li><a href="#">Trabajamos con arte digital?</a></li>
+                    <li><a href="#">Cómo registrar eventos?</a></li>
+                    <li><a href="#">Dirección: Calle de la Cultura #42, CDMX</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
