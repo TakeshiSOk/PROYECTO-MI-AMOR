@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="profile-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="menu-icon">☰</div>
+                <span class="logo-text">GALERÍAS<br>URBANAS</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#comunidad">Comunidad</a>
+                <a href="#acerca">Acerca de</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="profile-container">
+            <!-- Banner del perfil -->
+            <div class="profile-banner">
+                <div class="banner-overlay"></div>
+            </div>
+
+            <!-- Información del perfil -->
+            <div class="profile-header">
+                <div class="profile-photo-large">
+                    <div class="photo-circle-large">👤</div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">María González</h1>
+                    <p class="profile-username">@mariagonzalez</p>
+                    <div class="profile-location">
+                        <span>📍 Ciudad de México, México</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-edit" onclick="editProfile()">
+                        ✏️ Editar Perfil
+                    </button>
+                    <button class="btn-share">
+                        🔗 Compartir
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-number">47</span>
+                    <span class="stat-label">Eventos asistidos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">234</span>
+                    <span class="stat-label">Seguidores</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">189</span>
+                    <span class="stat-label">Siguiendo</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Obras favoritas</span>
+                </div>
+            </div>
+
+            <!-- Contenido del perfil -->
+            <div class="profile-content">
+                <!-- Columna izquierda -->
+                <div class="profile-sidebar">
+                    <!-- Sobre mí -->
+                    <div class="profile-card">
+                        <h3>Sobre mí</h3>
+                        <p class="bio-text">
+                            Apasionada del arte contemporáneo y la fotografía urbana. Siempre en busca de nuevas experiencias culturales que desafíen mi perspectiva del mundo.
+                        </p>
+                    </div>
+
+                    <!-- Intereses -->
+                    <div class="profile-card">
+                        <h3>Intereses Artísticos</h3>
+                        <div class="interests-display">
+                            <span class="interest-tag">🎨 Pintura</span>
+                            <span class="interest-tag">📸 Fotografía</span>
+                            <span class="interest-tag">🎭 Teatro</span>
+                            <span class="interest-tag">🎵 Música</span>
+                            <span class="interest-tag">📚 Literatura</span>
+                            <span class="interest-tag">🎬 Cine</span>
+                        </div>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div class="profile-card">
+                        <h3>Información</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-icon">📧</span>
+                                <span>maria@ejemplo.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📅</span>
+                                <span>Miembro desde Enero 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="profile-main">
+                    <!-- Tabs -->
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" onclick="switchTab('eventos')">
+                            🎪 Eventos
+                        </button>
+                        <button class="tab-btn" onclick="switchTab('favoritos')">
+                            ❤️ Favoritos
+                        </button>
+                        <button class="tab-btn" onclick="switchTab('actividad')">
+                            📊 Actividad
+                        </button>
+                    </div>
+
+                    <!-- Contenido de tabs -->
+                    <div class="tab-content" id="eventos-tab">
+                        <div class="event-card">
+                            <div class="event-image">🎨</div>
+                            <div class="event-info">
+                                <h4>Exposición de Arte Moderno</h4>
+                                <p class="event-date">15 de Noviembre, 2025</p>
+                                <p class="event-location">Museo Nacional de Arte</p>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">📸</div>
+                            <div class="event-info">
+                                <h4>Fotografía Urbana Workshop</h4>
+                                <p class="event-date">8 de Noviembre, 2025</p>
+                                <p class="event-location">Centro Cultural Digital</p>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-image">🎭</div>
+                            <div class="event-info">
+                                <h4>Festival de Teatro Contemporáneo</h4>
+                                <p class="event-date">1 de Noviembre, 2025</p>
+                                <p class="event-location">Teatro de la Ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="favoritos-tab" style="display: none;">
+                        <div class="empty-state">
+                            <span class="empty-icon">❤️</span>
+                            <h4>Tus obras favoritas</h4>
+                            <p>Aquí aparecerán las obras de arte que marques como favoritas</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="actividad-tab" style="display: none;">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-icon">✅</span>
+                                <div class="activity-text">
+                                    <p><strong>Asistió</strong> a "Exposición de Arte Moderno"</p>
+                                    <span class="activity-time">Hace 2 días</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">❤️</span>
+                                <div class="activity-text">
+                                    <p><strong>Le gustó</strong> "Fotografía: Luces de la Ciudad"</p>
+                                    <span class="activity-time">Hace 5 días</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon">💬</span>
+                                <div class="activity-text">
+                                    <p><strong>Comentó</strong> en "Festival de Teatro"</p>
+                                    <span class="activity-time">Hace 1 semana</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-text">GALERÍAS<br>URBANAS</span>
+                </div>
+                <p class="footer-description">
+                    Descubre experiencias artísticas únicas, explora galerías virtuales y conecta con una comunidad apasionada por el arte.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Eventos destacados</h4>
+                <ul>
+                    <li><a href="#">Arte en Los Independientes</a></li>
+                    <li><a href="#">Performance de Arte Urbano</a></li>
+                    <li><a href="#">Instalación Mayor Astica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Comunidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contáctanos</h4>
+                <ul>
+                    <li><a href="#">Correo Electrónico</a></li>
+                    <li><a href="#">Trabajamos con arte digital?</a></li>
+                    <li><a href="#">Cómo registrar eventos?</a></li>
+                    <li><a href="#">Dirección: Calle de la Cultura #42, CDMX</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="profile-script.js"></script>
+</body>
+</html>
